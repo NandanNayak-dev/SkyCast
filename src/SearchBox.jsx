@@ -1,6 +1,24 @@
 import Button from "@mui/material/Button";
-import "./SearchBox.css";
+import Box from "@mui/material/Box";
 import { useState } from "react";
+
+const formStyles = {
+  display: "flex",
+  alignItems: "center",
+  gap: "0.75rem",
+  flexWrap: "wrap",
+};
+
+const inputStyles = {
+  height: "2.5rem",
+  width: "12.5rem",
+  padding: "0 0.875rem",
+  border: "0.09375rem solid #1976d2",
+  borderRadius: "0.375rem",
+  outline: "none",
+  color: "#1976d2",
+  fontSize: "1rem",
+};
 
 export default function SearchBox({ setWeatherData }) {
   let [city, setCity] = useState("");
@@ -24,8 +42,8 @@ export default function SearchBox({ setWeatherData }) {
     getWeatherInfo();
   };
   return (
-    <div className="SearchBox">
-      <form action="" onSubmit={handleSubmit}>
+    <Box>
+      <Box component="form" onSubmit={handleSubmit} sx={formStyles}>
         <input
           type="text"
           id="city"
@@ -33,12 +51,13 @@ export default function SearchBox({ setWeatherData }) {
           required
           value={city}
           onChange={handleChange}
+          style={inputStyles}
         />
 
         <Button variant="contained" type="submit">
           Search
         </Button>
-      </form>
-    </div>
+      </Box>
+    </Box>
   );
 }

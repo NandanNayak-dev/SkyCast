@@ -6,10 +6,10 @@ function App() {
   let [weatherData, setWeatherData] = useState(null);
 
   return (
-    <>
+    <div style={{ fontFamily: '"Poppins", sans-serif' }}>
       <Navbar setWeatherData={setWeatherData} />
       <Content weatherData={weatherData} />
-    </>
+    </div>
   );
 }
 
