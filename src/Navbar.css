@@ -1,0 +1,19 @@
+.Navbar {
+  padding: 1.25rem 2rem;
+  color: white;
+  background: linear-gradient(90deg, #1d4ed8, #0f172a);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  border-radius: 1rem;
+}
+
+.Navbar h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.Navbar p {
+  margin: 0.25rem 0 0;
+}
