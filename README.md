@@ -122,4 +122,5 @@ The project is deployed on Vercel:
 
 ## Author
 
+
 Developed as the SkyCast weather project.
